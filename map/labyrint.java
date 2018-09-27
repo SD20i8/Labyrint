@@ -14,18 +14,18 @@ public class labyrint extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 
-		Map map = MapInterpreter.interpretMap(new File("v37/map.txt"));
+		Map map = MapInterpreter.interpretMap(new File("map.txt"));
 
 		Scene scene = new Scene(map, map.getWidth(), map.getHeight());
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
 		
-
+		new solver.Main(map);
+		
 	}
 
 	public static void main(String[] args) {
 		launch();
 	}
-
 }
