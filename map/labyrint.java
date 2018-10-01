@@ -2,11 +2,8 @@ package map;
 
 import java.io.File;
 
-import blocks.Block;
-import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 public class labyrint extends Application {
@@ -15,13 +12,15 @@ public class labyrint extends Application {
 	public void start(Stage primaryStage) throws Exception {
 
 		Map map = MapInterpreter.interpretMap(new File("map.txt"));
-
+		new solver.Main(map);
+         
+         
 		Scene scene = new Scene(map, map.getWidth(), map.getHeight());
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
 		
-		new solver.Main(map);
+		
 		
 	}
 
