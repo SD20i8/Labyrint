@@ -8,17 +8,17 @@ import javafx.scene.shape.Rectangle;
 public class GoalBlock extends Block {
 
 	public GoalBlock() {
+		g = true;
 		Image image3 = new Image("dia.png");
-		 ImageView iv2 = new ImageView();
-       iv2.setImage(image3);
-       iv2.setFitWidth(25);
-       iv2.setFitHeight(25);
-       iv2.setPreserveRatio(false);
-       iv2.setSmooth(true);
-       iv2.setCache(true);
-       
-     
+		ImageView iv2 = new ImageView();
+		iv2.setImage(image3);
+		iv2.setFitWidth(25);
+		iv2.setFitHeight(25);
+		iv2.setPreserveRatio(false);
+		iv2.setSmooth(true);
+		iv2.setCache(true);
+
 		this.getChildren().add(iv2);
 	}
-	
+
 }

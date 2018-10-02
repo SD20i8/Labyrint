@@ -9,5 +9,6 @@ public class StartBlock extends Block {
 		Rectangle r = new Rectangle(Block.SIZE, Block.SIZE);
 		r.setFill(Color.GREEN);
 		this.getChildren().add(r);
+		g = false;
 	}
 }

@@ -17,7 +17,7 @@ public class ClosedBlock extends Block{
         iv2.setSmooth(true);
         iv2.setCache(true);
         
-      
+      g = false;
 		this.getChildren().add(iv2);
 	}
 	

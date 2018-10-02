@@ -7,19 +7,22 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class labyrint extends Application {
-
+	
+	public static Stage primaryStage;
 	@Override
-	public void start(Stage primaryStage) throws Exception {
-
+	public void start(Stage tempStage) throws Exception {
+		
+		primaryStage = tempStage;
+		
 		Map map = MapInterpreter.interpretMap(new File("map.txt"));
-		new solver.Main(map);
+		solver.Main solver = new solver.Main(map);
          
          
 		Scene scene = new Scene(map, map.getWidth(), map.getHeight());
 		primaryStage.setScene(scene);
 		primaryStage.show();
 		
-		
+		solver.at.start();
 		
 		
 	}

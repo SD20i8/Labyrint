@@ -9,6 +9,7 @@ public class Map extends Group {
 
 	private ArrayList<ArrayList<Block>> map = new ArrayList<ArrayList<Block>>();
 	private int startX, startY;
+	public int goalX, goalY;
 
 	public void add(Block b, int row) {
 		ArrayList<Block> mapRow;

@@ -37,6 +37,8 @@ public class MapInterpreter {
 						map.setStartY(row);
 					} else if (c == 'G') {
 						b = new GoalBlock();
+						map.goalX = col;
+						map.goalY = row;
 					} else {
 						b = new OpenBlock();
 					}
